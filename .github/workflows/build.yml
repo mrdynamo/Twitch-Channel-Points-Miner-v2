@@ -1,4 +1,4 @@
-name: deploy-docker
+name: deploy-ghcr
 
 on:
   push:
