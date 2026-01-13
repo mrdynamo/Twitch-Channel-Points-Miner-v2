@@ -52,7 +52,7 @@ jobs:
           tags: |
             type=semver,pattern={{version}},enable=${{ startsWith(github.ref, 'refs/tags') }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/master' }}
-            type=raw,value=dev-{{short_sha}},enable=${{ github.ref == 'refs/heads/dev' }}
+            type=raw,value=dev,enable=${{ github.ref == 'refs/heads/dev' }}
             type=raw,value=build-${{ steps.get_dev_sha.outputs.dev_short_sha }},enable=${{ steps.get_dev_sha.outputs.dev_short_sha != '' }}
 
       - name: Build and push
